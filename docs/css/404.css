@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  background-color: #3871d1;
+  font-family: "Muli", sans-serif;
+  overflow: hidden;
+}
+
+.error {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  color: white;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+.error__code {
+  font-size: 98px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.error__text {
+  font-size: 20px;
+}
+
+.animated {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 2.5s;
+}
+
+/*# sourceMappingURL=404.css.map */

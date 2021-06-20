@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  /* background: rgba(31,63,116,1); */
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Muli", sans-serif;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

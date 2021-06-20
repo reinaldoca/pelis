@@ -1,0 +1,84 @@
+.carrousel {
+  max-width: 100%; /*con esto logro que haya scroll aunque esté deshabilitado*/
+  overflow-y: hidden; 
+  overflow-x: auto;
+  padding-left: 30px;
+  position: relative; /*todos los hijos se posisicionan el relación al padre */
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.carrousel__container {
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap; /*evita que haya salto de linea*/
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+.carrousel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  font-size: 20px;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  position: relative;
+}
+.carrousel-item:hover ~ .carrousel-item {
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0)
+}
+.carrousel__container:hover .carrousel-item{
+  opacity: .3;
+}
+.carrousel__container:hover .carrousel-item:hover {
+  transform: scale(1.5);  
+  -webkit-transform: scale(1.5);
+  opacity: 1;
+}
+.carrousel-item__img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  -o-object-fit: cover;
+}
+.carrousel-item__details {
+  align-items: flex-start;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.carousel-item__details--img {
+  width: 20px;
+}
+.carrousel-item:hover .carrousel-item__details {
+  opacity: 1;
+}
+.carrousel-item__details--title {
+  color: white;
+  margin: 5px 0px 0px 0px;
+}
+.carrousel-item__details--subtitle {
+  color: white;
+  font-size: 8px;
+  margin: 3px 0px;
+}

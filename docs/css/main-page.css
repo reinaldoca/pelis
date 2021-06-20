@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #3871d1;
+  font-family: "Muli", sans-serif;
+}
+
+.wrapper {
+  height: auto;
+  min-height: 90%;
+}
+
+.categories__title {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100vh;
+  font-family: 'Lucida Sans Unicode';
+}
+
+/*# sourceMappingURL=main-page.css.map */
